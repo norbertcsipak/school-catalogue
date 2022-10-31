@@ -34,3 +34,17 @@ class School {
     return substituteTeachers[randInteger];
   }
 }
+
+class PrimarySchool extends School {
+  constructor (name, numberOfStudents, pickupPolicy) {
+    super(name, 'primary', numberOfStudents);
+    this._pickupPolicy = pickupPolicy;
+  }
+
+  get pickupPolicy () {
+    return this._pickupPolicy;
+  }
+}
+
+const primarySchool1 = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
+primarySchool1.quickFacts();
